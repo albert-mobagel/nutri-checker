@@ -1,0 +1,54 @@
+{
+  "_status": "EXAMPLE values only — not medical advice. Real targets must come from the person's care team.",
+  "name": "example",
+  "reply_language": "match the user's message",
+  "meals_per_day": 3,
+  "targets": {
+    "protein_g": {
+      "min": 40,
+      "max": 50,
+      "_why": "Placeholder ~0.8-1.0 g/kg: balances low muscle (wants more) against kidney disease (wants less). Clinician decides."
+    },
+    "carbs_g_per_meal": {
+      "max": 45,
+      "_why": "Placeholder ~3 carb choices per meal for diabetes."
+    },
+    "potassium_mg": {
+      "max": 2000
+    },
+    "phosphorus_mg": {
+      "max": 800
+    },
+    "sodium_mg": {
+      "max": 2000
+    },
+    "kcal": {
+      "min": 1400,
+      "_why": "Placeholder floor: under-eating and muscle loss are a risk; the care team sets this."
+    }
+  },
+  "glucose": {
+    "low_mg_dl": 70,
+    "high_alert_mg_dl": 300,
+    "low_sugar_plan": "Follow the doctor's low-blood-sugar plan. Placeholder: 15 g fast sugar (glucose tablets or 1/2 cup apple juice — not orange juice, which is high in potassium), recheck in 15 minutes."
+  },
+  "caregiver": {
+    "name": "caregiver",
+    "notify_on": [
+      "red_flag_symptom",
+      "glucose_low",
+      "glucose_high",
+      "skipped_meals",
+      "weight_alert"
+    ]
+  },
+  "body": {
+    "_status": "PLACEHOLDER thresholds — confirm with the care team.",
+    "weight_loss_alert_pct_7d": 2,
+    "weight_loss_alert_pct_30d": 5,
+    "weight_gain_alert_kg_1d": 1,
+    "weight_gain_alert_kg_7d": 2,
+    "_why": "Weight loss = under-eating / muscle loss. Fast gain = possible fluid retention (kidneys) — call the doctor.",
+    "steps_goal": 4000
+  }
+}
